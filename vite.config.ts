@@ -1,7 +1,6 @@
 import * as path from "path"
 import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
-import typescript from "rollup-plugin-typescript2"
 
 export default defineConfig({
 	build: {
@@ -16,21 +15,7 @@ export default defineConfig({
 				globals: {
 					react: "React"
 				}
-			},
-			plugins: [
-				typescript({
-					tsconfig: path.resolve(__dirname, "tsconfig.json"),
-					tsconfigOverride: {
-						compilerOptions: {
-							sourceMap: false,
-							declaration: true,
-							declarationMap: true,
-							emitDeclarationOnly: true
-						},
-						include: ["src/lib"]
-					}
-				})
-			]
+			}
 		}
 	},
 	plugins: [react()]
