@@ -1,0 +1,55 @@
+{
+	"name": "lottie-player-zip",
+	"version": "1.0.0",
+	"description": "Lottie Player with ZIP Support (for React)",
+	"license": "MIT",
+	"author": "arnu515",
+	"keywords": [
+		"vite",
+		"react",
+		"lottie"
+	],
+	"homepage": "https://github.com/arnu515/lottie-player-zip",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/arnu515/lottie-player-zip"
+	},
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"main": "dist/lottie-player-zip.umd.js",
+	"module": "dist/lottie-player-zip.es.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/lottie-player-zip.es.js",
+			"require": "./dist/lottie-player-zip.umd.js"
+		}
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"prepublishOnly": "npm run build"
+	},
+	"dependencies": {
+		"@lottiefiles/lottie-player": "^1.5.7",
+		"@zip.js/zip.js": "^2.6.14"
+	},
+	"peerDependencies": {
+		"@lottiefiles/lottie-player": "^1.5.7",
+		"@zip.js/zip.js": "^2.6.14"
+	},
+	"devDependencies": {
+		"@types/node": "^18.7.3",
+		"@types/react": "^18.0.0",
+		"@types/react-dom": "^18.0.0",
+		"@vitejs/plugin-react": "^1.3.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"rollup-plugin-typescript2": "^0.32.1",
+		"typescript": "^4.6.3",
+		"vite": "^2.9.15"
+	}
+}
